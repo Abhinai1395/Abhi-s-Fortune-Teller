@@ -3,10 +3,11 @@ const synth = window.speechSynthesis;
 document.querySelector("#tell").addEventListener("click",getFortune)
 
 function getFortune (){
-    const name = document.querySelector("#name").value.toLowerCase()
+    const name = document.querySelector("#name").value
+    const nameCheck = name.toLowerCase()
     let fortune
 
-    switch (name) {
+    switch (nameCheck) {
         case "abhi":
         case "abhinai":
             let arrA = [`${name} is destined to be a One Piece hero, just like Luffy! He will bravely embark on an epic journey to fulfill his dreams, and lead his crew to success and glory!`, `${name} is destined for greatness! He has the strength and courage of a true One Piece Hero, just like Luffy, and will be a force to be reckoned with in the future.`, `The journey of ${name}, like One Piece hero Luffy, will be full of exciting and challenging adventures that will help him reach his goals!`,`${name} is destined to become the next great pirate king, just like Luffy! With determination and courage, there's no journey too difficult for him!`,`${name} is destined to be a hero like Luffy, achieving great feats and overcoming all odds to become a champion of justice!`,`${name}, like Luffy and Zoro, has the potential to become a great leader with courage, strength, and a never-give-up attitude`,`With ${name} at the helm, nothing can stand in the way of One Piece's Luffy and Zoro! He is a fearless leader who will guide them to greatness.`]
